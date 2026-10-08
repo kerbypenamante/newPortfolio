@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Your Name · Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=Manrope:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Intro loading screen with animated welcome message -->
+  <div id="intro" aria-hidden="true">
+      <div class="ic">
+        <span class="ic-c"><svg viewBox="0 0 24 24">
+            <path d="m8 8-4 4 4 4M16 8l4 4-4 4" />
+          </svg></span>
+        <span class="ic-c"><svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" />
+            <path d="M4 21a8 8 0 0 1 16 0" />
+          </svg></span>
+        <span class="ic-c"><svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+          </svg></span>
+      </div>
+      <h1>
+        <span class="w">Welcome</span>
+        <span class="w">to</span>
+        <span class="w">my</span>
+        <span class="l2">
+          <span class="w">Portfolio</span>
+        </span>
+      </h1>
+      <div class="pill">yourname.dev</div>
+      <div class="ld"><i></i></div>
+    </div>
+
+  <!-- Main navigation and page header -->
+  <header>
+    <nav aria-label="Main">
+      <a class="logo" href="#home">kerbs.dev</a>
+      <a href="#home" class="on">Home</a><a href="#about">About</a><a href="#portfolio">Portfolio</a><a
+        href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero section: introduction, profile, and primary call-to-action -->
+    <section id="home" class="hero">
+      <canvas id="fx" aria-hidden="true"></canvas>
+      <div class="hero-in">
+        <div class="avatar" id="avatar" role="img" aria-label="Profile picture"><svg viewBox="0 0 100 100">
+            <rect width="100" height="100" fill="#d9d9d9" />
+            <circle cx="50" cy="40" r="18" fill="#222" />
+            <path d="M12 100c0-30 18-44 38-44s38 14 38 44z" fill="#111" />
+          </svg></div>
+        <div class="welcome">Portfolio</div>
+        <h1>My <span>Portfolio</span></h1>
+        <div class="type" id="type"></div>
+        <p class="lede">Hi, I'm Kery Penamante.
+          an aspiring IT student passionate programming, and web development. 
+          Explore my website to learn more about me, my skills, projects, and interests.
+        </p>
+        <div class="btns"><a class="btn solid" href="#about">About me</a><a class="btn" href="#portfolio">See my projects</a></div>
+        <div class="chips"><span class="chip">Java</span><span class="chip">PHP</span><span class="chip">HTML</span>
+        </div>
+      </div>
+      <div class="hint" aria-hidden="true">Scroll<i></i></div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="track" id="track"></div>
+    </div>
+
+    <!-- About section: personal details, education, skills, and interests -->
+    <section id="about" class="about">
+      <div>
+        <div class="tag">About me</div>
+        <h2>Kerby Penamante</h2>
+        <p>A 3rd Year IT student with a passion for Full stack development.
+          Experienced in building responsive websites with an eye for visual detail and a focus on user experience.</p>
+        <dl class="info">
+          <dt>Name</dt>
+          <dd>Kerby Penamante</dd>
+          <dt>Age</dt>
+          <dd>20 years old</dd>
+          <dt>Location</dt>
+          <dd>Manila, Philippines</dd>
+          <dt>Email</dt>
+          <dd>kerbypenamante325@email.com</dd>
+          <dt>Status</dt>
+          <dd>Open to internships</dd>
+        </dl>
+        <span class="quote">"Turning ideas into clean, modern, and meaningful digital experiences."</span>
+        <div class="btns"><a class="btn solid" href="#" id="cv"><svg viewBox="0 0 24 24">
+              <path d="M14 3H6v18h12V7zM14 3v4h4" />
+            </svg>Download CV</a><a class="btn" href="#portfolio"><svg viewBox="0 0 24 24">
+              <path d="M7 17 17 7M8 7h9v9" />
+            </svg>View projects</a></div>
+      </div>
+      <div class="lan"><canvas id="lc" aria-label="ID card hanging on a lanyard. Drag it to swing it."></canvas></div>
+      <div class="more" id="more">
+        <div class="box">
+          <h3>Education</h3>
+          <ul class="edu">
+            <li><b>BS Information Technology</b><span>National University, 2024 to present</span></li>
+            <li><b>Senior High School, ICT</b><span>Tongohin National High School, 2022 to 2024</span></li>
+            <li><b>Junior High School</b><span>Tongohin National High School, 2018 to 2022</span></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Skills</h3>
+          <div id="skills"></div>
+        </div>
+        <div class="box">
+          <h3>Interests</h3>
+          <div class="chips l" id="interests"></div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><svg viewBox="0 0 24 24">
+            <path d="m8 8-4 4 4 4M16 8l4 4-4 4" />
+          </svg><b id="n1">0</b><span>Projects</span></div>
+        <div class="stat"><svg viewBox="0 0 24 24">
+            <circle cx="12" cy="9" r="5" />
+            <path d="m9 13-1 8 4-2 4 2-1-8" />
+          </svg><b id="n2">0</b><span>Achievements</span></div>
+        <div class="stat"><svg viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <path d="m8 12 3 3 5-6" />
+          </svg><b id="n3">0</b><span>Completed works</span></div>
+      </div>
+    </section>
+
+    <!-- Portfolio section: project, achievement, and tech stack showcases -->
+    <!-- Portfolio showcase: projects, achievements, and technical stack -->
+    <section id="portfolio" class="show">
+      <h2>Portfolio Showcase</h2>
+      <p class="sub">Explore my journey through projects, certifications, and technical skills.</p>
+      <div class="tabs" role="tablist">
+        <button role="tab" aria-selected="true" data-t="projects">Projects</button>
+        <button role="tab" aria-selected="false" data-t="achievements">Achievements</button>
+        <button role="tab" aria-selected="false" data-t="stack">Tech Stack</button>
+      </div>
+      <div id="panel"></div>
+    </section>
+
+    <!-- Contact section: message form, social links, and comments -->
+    <section id="contact" class="contact">
+      <div class="box">
+        <h3>Contact me</h3>
+        <p>Email: kerbypenamante325@email.com &nbsp;|&nbsp; Phone: +63 981 111 0123<br>Reach out if you want to collaborate, discuss
+          ideas, or simply say hello.</p>
+        <input class="fld" id="cn" placeholder="your name.." autocomplete="name"><small class="err" id="e-cn"></small>
+        <input class="fld" id="ce" type="email" placeholder="your email.." autocomplete="email"><small class="err" id="e-ce"></small>
+        <textarea class="fld" id="cm" rows="4" placeholder="your message.."></textarea><small class="err" id="e-cm"></small>
+        <button class="btn full" id="send"><svg viewBox="0 0 24 24">
+            <path d="m21 3-9 18-2-8-8-2zM21 3 10 13" />
+          </svg>Send message</button>
+        <p class="soc-label">Find me on</p>
+        <div class="soc">
+          <a href="#"><svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="3" />
+              <path
+                d="M13.5 22v-8h3l.5-3h-3.5V7.2c0-.9.3-1.5 1.6-1.5H17V2.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.2V11H7v3h3.3v8h3.2Z" />
+            </svg><span>Facebook<small>@kerbypenamante</small></span></a>
+          <a href="#"><svg viewBox="0 0 24 24">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+            </svg><span>Instagram<small>@kerbypenamante</small></span></a>
+          <a href="#"><svg viewBox="0 0 24 24">
+              <rect x="2" y="5" width="20" height="14" rx="4" />
+              <path d="m10 9 5 3-5 3z" />
+            </svg><span>YouTube<small>@kerbypenamante</small></span></a>
+          <a href="#"><svg viewBox="0 0 24 24">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-1-2.6c3.1-.3 6.4-1.5 6.4-7A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.900 1S18.700.7 16 2.500a13.400 13.400 0 0 0-7 0C6.300.7 5.100 1 5.100 1A5 5 0 0 0 5 4.800 5.400 5.400 0 0 0 3.600 8.500c0 5.500 3.300 6.700 6.400 7a3.400 3.400 0 0 0-1 2.600V22" />
+            </svg><span>GitHub<small>@kerbypenamante</small></span></a>
+        </div>
+      </div>
+      <div class="box">
+        <h3>Comments</h3>
+        <p>Leave your thoughts here.</p>
+        <input class="fld" id="kn" placeholder="your name.."><small class="err" id="e-kn"></small>
+        <textarea class="fld" id="kc" rows="3" placeholder="your comment.."></textarea><small class="err"
+          id="e-kc"></small>
+        <button type="button" class="btn full compact" id="post">Post comment</button>
+        <div id="list"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer and user feedback toast -->
+  <footer>Portfolio ni Kerbs</footer>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
